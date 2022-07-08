@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+h3{
+    font-size: clamp(0.5rem, 1.5rem, 0.9rem);
+}
+
+.main-div{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #030E4F , #F49F1C);
+}
+
+.main-contact-form{
+    height: 80%;
+    width: 50%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    position: relative;
+    top: 10%;
+    box-shadow: 0.5rem 0.5rem 1.2rem 0.1rem rgb(0 0 0 / 48%);
+    display: flex;
+}
+
+.contact-details{
+    height: 85%;
+    width: 52%;
+    background-color: #F49F1C;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: -5rem;
+    top: 2rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem 0.1rem rgb(0 0 0 / 48%);
+    padding: 3rem 0 3rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.contact-common{
+    margin-bottom: 2.5rem;
+}
+
+.contact-common h2{
+    color: #030E4F;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.contact-common p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #030E4F;
+}
+
+.social-icons{
+    display: flex;
+}
+
+.social-icons i{
+    margin-right: 1.5rem;
+    font-size: 1.25rem;
+    color: white;
+    transition: 0.3s;
+    height: 2.2rem;
+    width: 2.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #030E4F;
+}
+
+.social-icons i.fa-facebook-f:hover{
+    color: #4267B2;
+}
+
+.social-icons i.fa-twitter:hover{
+    color: #00acee;
+}
+
+.social-icons i.fa-youtube:hover{
+    color: #FF0000;
+}
+
+.copyright p{
+    font-weight: 600;
+}
+
+
+.inner-contact-details{
+    width: 40%;
+    background-color: #F49F1C;
+    height: 80%;
+    width: 40%;
+    margin-left: 4rem;
+    position: absolute;
+    top: 10%;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1.2rem 0.1rem rgb(0 0 0 / 48%);
+    display: none;
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.form-wrapper{
+    margin-left: 38%;
+    padding: 2.8rem;
+}
+
+.form-wrapper h1{
+    color: #030E4F;
+}
+
+.form-wrapper h3{
+    color: #818181;
+    font-weight: 500;
+    border-right: 0.1rem solid #818181;
+    animation: typingEffect 15s infinite steps(18), caret 0.7s infinite step-end;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes caret {
+    0%, 100%{border-color: transparent;}
+    50%{border-color: #818181;}
+}
+
+@keyframes typingEffect {
+    0%{width: 0ch;}
+    30%{width: 15ch;}
+    80%{width: 15ch;}
+    90%{width: 0ch;}
+    100%{width: 0ch;}
+}
+
+form{
+    margin-top: 1.5rem;
+    width: 15rem;
+}
+
+form input{
+    width: 100%;
+    height: 2rem;
+    padding-left: 1rem;
+    border: 0.08rem solid #818181;
+    margin-bottom: 1.2rem;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form input::placeholder{
+    font-size: 1rem;
+}
+
+form textarea{
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    border: 0.08rem solid #818181;
+    margin-bottom: 1.3rem;
+    resize: none;
+    display: inline-block;
+    width: 100%;
+    height: 5.5rem;
+    
+}
+
+form textarea::placeholder{
+    font-size: 1rem;
+}
+
+form textarea:focus{
+    outline: none;
+}
+
+form button{
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #030E4F;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+form button:hover{
+    background-color: #F49F1C;
+    color: #030E4F;
+}
+
+/* .down-contact-details{
+    margin-top: 1rem;
+    background-color: #F49F1C;
+    height: 5rem;
+    width: 100%;
+    display: none;
+} */
+
+
+
+
+/* Responsiveness */
+ @media (max-width: 1200px){
+    .contact-details{
+        width: 55%;
+    }
+} 
+
+@media screen and (max-width: 1025px) {
+    .main-contact-form{
+        width: 80%;
+    }
+
+    .contact-details{
+        display: none;
+    }
+
+    .inner-contact-details{
+        display: block;
+    }
+
+    form{
+        margin-left: 30%;
+    }
+
+    h1,h3{
+        margin-left: 30%;
+    }
+
+}
+
+@media (max-width: 769px){
+    .form-wrapper{
+        margin: 0 auto;
+    }
+
+    .form-wrapper h1,h3{
+        margin-left: 15%;
+    }
+
+    form{
+        width: 80%;
+        margin-left: 15%;
+    }
+
+    form input{
+        width: 80%;
+    }
+
+    form textarea{
+        width: 80%;
+    }
+
+    .inner-contact-details{
+        display: none;
+    }
+}
+
+@media (max-width: 481px){
+
+}
+
+@media (max-width: 320px){
+
+} 
+
+
+
+
+
+
+
+
+
